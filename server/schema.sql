@@ -98,16 +98,27 @@ ALTER TABLE `usersAndRooms` ADD FOREIGN KEY (roomId) REFERENCES `room` (`id`);
 -- ---
 -- Test Data
 -- ---
--- INSERT INTO `user` (`id`,`username`,`currentRoomId`) VALUES
--- ('','','');
--- INSERT INTO `room` (`id`,`name `,`createdById`,`createdAt`) VALUES
--- ('','','','');
--- INSERT INTO `messages` (`id`,`text`,`createdById`,`roomId`,`createdAt`) VALUES
--- ('','','','','');
--- INSERT INTO `user/user` (`userId`,`friendId`) VALUES
--- ('','');
--- INSERT INTO `users and rooms` (`userId`,`roomId`) VALUES
--- ('','');
+INSERT INTO `user` (`id`,`username`,`currentRoomId`) VALUES
+('','','');
+INSERT INTO `room` (`id`,`name `,`createdById`,`createdAt`) VALUES
+('','','','');
+INSERT INTO `messages` (`id`,`text`,`createdById`,`roomId`,`createdAt`) VALUES
+('','','','','');
+INSERT INTO `user/user` (`userId`,`friendId`) VALUES
+('','');
+INSERT INTO `users and rooms` (`userId`,`roomId`) VALUES
+('','');
+
+INSERT INTO `user` (`username`,`currentRoomId`) VALUES
+('benny','2');
+INSERT INTO `room` (`name`,`createdById`,`createdAt`) VALUES
+('blah','2','2018-04-03 12:12:12');
+INSERT INTO `messages` (`text`,`createdById`,`roomId`,`createdAt`) VALUES
+('','','','','');
+INSERT INTO `user/user` (`userId`,`friendId`) VALUES
+('','');
+INSERT INTO `users and rooms` (`userId`,`roomId`) VALUES
+('','');
 
 
 

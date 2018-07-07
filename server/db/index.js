@@ -13,10 +13,12 @@ var establishDB = function() {
   });
 
   connection.connect();
+  
+  connection.query('INSERT INTO user (username, currentRoomId) VALUES ("benny", 1)');
 
   connection.query('SELECT * FROM user', function (err, rows, fields) {
     if (err) { throw err; }
-
+    
     console.log('The solution is: ', rows);
   });
 
@@ -28,3 +30,9 @@ module.exports.establishDB = establishDB;
 
 
 
+// INSERT INTO rooms (name, createdBy, createdAt) VALUES
+// (app.roomname, app.username, '2018-12-14 05:32:34')
+
+// INSERT INTO user (username, currentRoomId) VALUES (app.username, app.roomname)
+
+// INSERT INTO messages (text, createdById, roomId, createdAt) VALUES (message.text,  )
