@@ -30,3 +30,9 @@ if (!module.parent) {
   console.log('Listening on', app.get('port'));
 }
 
+db.establishDB();
+
+// mysql connection
+// var mysql = require('mysql');
+
+
